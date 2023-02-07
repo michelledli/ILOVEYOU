@@ -1,8 +1,8 @@
-# Tech Stack (Working Document)
+### Tech Stack (Working Document)
 
 ---
 
-## Backend
+### Backend
 
 Java - [Javalin](https://javalin.io/), [Spring](https://spring.io/), [Jackson JSON](https://github.com/FasterXML/jackson), [Hibernate ORM](https://hibernate.org/orm/), [H2 Embedded Database](https://h2database.com/html/main.html)
 
@@ -13,7 +13,7 @@ Javascript - [Express.js](https://spring.io/), [Nest.js](https://nestjs.com/)
 
 ---
 
-## Frontend
+### Frontend
 
 Javascript - [Vue](https://vuejs.org/), [React](https://reactjs.org/), [Angular](https://angular.io/), [Next.js](https://nextjs.org/)
 
