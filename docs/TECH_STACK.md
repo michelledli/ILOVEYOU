@@ -18,4 +18,4 @@ CSS - [Tailwind](https://tailwindcss.com/), [Milligram](https://milligram.io/), 
 Assets - [Google Fonts](https://fonts.google.com/), [Google Icons](https://fonts.google.com/icons), [Unsplash](https://unsplash.com/)
 Mobile - [Nativescript](https://nativescript.org/), [React Native](https://reactnative.dev/), [Apache Cordova](https://cordova.apache.org/), [Capacitor](https://capacitorjs.com/)
 ECommerce - [Stripe](https://github.com/stripe-samples), [PayPal](https://developer.paypal.com/home)
-Other - [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps), [JWT](https://jwt.io/), [OAuth](https://oauth.net/2/)
+Other - [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps), [JWT](https://jwt.io/), [OAuth](https://oauth.net/2/), [React Components](https://discord.com/api/webhooks/1079973784360067092/OWyy4xWsGd03_DDOowJ27nFeOtI8OdOHwNi0Pjc-IbqLMsDez0vc5Zg0Zbe5NPJj5kGM)
