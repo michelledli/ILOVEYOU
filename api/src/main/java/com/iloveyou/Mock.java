@@ -51,74 +51,79 @@ package com.iloveyou;
 
 public class Mock {
 
-    private static String makeEntity(long id, String... features) {
+    private static String makeEntity(String id, String... features) {
         String entity;
 
-        entity = "{\n" +
-                 "  \"id\": " + id + ",\n" +
-                 "  \"features\": [\n";
-        
-        for(String feature : features) {
-            entity += feature + ",\n";
+        entity = "{" +
+                 "\"id\": " + id + ", " +
+                 "\"features\":[";
+
+        for(int i = 0; i < features.length; i++) {
+            entity += features[i];
+
+            if(i < features.length - 1)
+                entity += ", ";
+
+            else
+                entity += "";
         }
         
-        entity += "  ]\n}";
+        entity += "]}";
 
         return entity;
     }
 
-    private static String makeFeature(long id, String key, String data, String type) {
-        return "    {\n" +
-               "      \"id\": " + id + ",\n" +
-               "      \"key\": \"" + key + "\",\n" +
-               "      \"type\": \"" + type + "\",\n" +
-               "    }";
+    private static String makeFeature(String id, String key, String data, String type) {
+        return "{" +
+               "\"id\": " + id + ", " +
+               "\"key\": \"" + key + "\", " +
+               "\"data\": \"" + data + "\", " + 
+               "\"type\": \"" + type + "\"" +
+               "}";
     }
 
-    // Could return all entities
-    // HAL find relation
-    // TODO: entity()
     // public static String entity() {}
 
-    public static String entity(long id) {
+    public static String entity(String id) {
         return makeEntity(
             id,
-            makeFeature(0, "key0", "data0", "text"),
-            makeFeature(id * 1, "key1", "0.12345", "number"),
-            makeFeature(id * 2, "key2", "true", "boolean"),
-            makeFeature(id * 3, "key3", null, "text")
+            makeFeature("0", "key0", "data0", "text"),
+            makeFeature("1", "key1", "0.12345", "number"),
+            makeFeature("2", "key2", "true", "boolean"),
+            makeFeature("3", "key3", null, "text")
         );
     }
 
-    public static String entityFeature(long id) {
+    public static String entityFeature(String id) {
         return makeFeature(id, "key" + id, "data" + id, "text");
     }
 
-    public static String entityFeature(long id, String key) {
+    public static String entityFeature(String id, String key) {
         return makeFeature(id, key, "data" + id, "text");
     }
 
-    public static String entityFeature(String key) {
+    public static String featureEntity(String key) {
         return "[\n" +
                makeEntity(
-                   0,
-                   makeFeature(0, "key0", "data0", "text"),
-                   makeFeature(1, "key1", "data1", "text"),
-                   makeFeature(2, "key2", "data2", "text")
+                   "0",
+                   makeFeature("0", "key0", "data0", "text"),
+                   makeFeature("1", "key1", "data1", "text"),
+                   makeFeature("2", "key2", "data2", "text")
                ) + ",\n" +
                makeEntity(
-                1,
-                makeFeature(3, "key0", "data0", "text"),
-                makeFeature(4, "key3", "data3", "text"),
-                makeFeature(5, "key4", "data4", "text"),
-                makeFeature(6, "key5", "data5", "text")
+                "1",
+                makeFeature("3", "key0", "data0", "text"),
+                makeFeature("4", "key3", "data3", "text"),
+                makeFeature("5", "key4", "data4", "text"),
+                makeFeature("6", "key5", "data5", "text")
             ) + ",\n" + "]";
     }
 
-    // TODO: feature()
+    // TODO: implement
     // public static String feature() {}
 
-    // TODO: feature(long id)
-    // public static String feature(long id) {}
+    public static String feature(String id) {
+        return makeFeature(id, "key", "", "text");
+    }
 }
 
